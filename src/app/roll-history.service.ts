@@ -6,4 +6,14 @@ import { Injectable } from '@angular/core';
 export class RollHistoryService {
 
   constructor() { }
+
+  rollHistory: any[] = [];
+
+  addRollHistory = (rh: any) => {
+    this.rollHistory = [
+      ...this.rollHistory
+      , rh
+    ];
+  };
+
 }
